@@ -1,0 +1,13 @@
+platform :ios,'11.0'
+target'MapCityEn'do
+  
+  pod 'AFNetworking'
+  pod 'RTRootNavigationController'
+  pod 'SDWebImage'
+  pod 'Masonry'
+  pod 'IQKeyboardManager'
+  pod 'MJExtension', '~> 3.0.13'
+  pod 'SVProgressHUD'
+  pod 'MJRefresh'
+ 
+end

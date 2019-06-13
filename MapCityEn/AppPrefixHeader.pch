@@ -1,0 +1,61 @@
+
+//
+//  AppPrefixHeader.pch
+//  FuturesPassTwo
+///Users/mac/Documents/GitHub/MapCity/MapCityEn/AppPrefixHeader.pch
+//  Created by mac on 2019/6/4.
+//  Copyright © 2019 FuturesPassTwo. All rights reserved.
+///Users/mac/Documents/GitHub/FuturesPassTwo/FuturesPassTwo/AppPrefixHeader.pch
+
+#ifndef AppPrefixHeader_pch
+#define AppPrefixHeader_pch
+
+///PCH----分支
+//Color\Size\func
+#import "XjhColorSizeFuncHeader.h"
+//string
+#import "XjhStringHeader.h"
+
+
+////------项目通用
+//App 主色
+#define appColors  ColorBlueLight
+//App 名称
+#define appNames @"Name"
+//App logo
+#define appLogos @"logoimg"
+
+#define loginPhoneNum @"15120006188"
+#define loginPasswords @"123456"
+
+
+//代理。枚举
+#import "XjhEnumTypeTools.h"
+#import "XjhDelegateTools.h"
+
+///常用工具类
+
+#import "UIViewPopAlert.h"
+#import "LoginTools.h"
+#import "myButton.h"
+#import "myLabel.h"
+#import "HeardView.h"
+#import "XjhNetWorking.h"//网络请求
+#import "BaseHiddenBarViewController.h"//控制器基类
+#import "UIViewExt.h"//view的左右上下宽高
+#import "UIColor+Hex.h"//颜色
+#import "MBProgressHUD+Extension.h"//加载显示器
+
+///---------pod KU
+#import <SVProgressHUD.h>//加载显示器
+#import <Masonry.h>
+#import <UIImageView+WebCache.h>
+#import <MJExtension.h>
+//#import <SDWebImage.h>
+#import <MJRefresh.h>
+
+// ------------- 系统框架 ---------
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#endif /* AppPrefixHeader_pch */
