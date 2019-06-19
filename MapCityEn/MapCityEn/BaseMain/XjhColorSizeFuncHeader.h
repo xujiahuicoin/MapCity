@@ -49,12 +49,14 @@
 
 /////////---------------------------------------Color
 
-#define RGB(r,g,b) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:1.0]
+#define ColorRGB(r,g,b) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:1.0]
 
 #define HexColor(hexValue) [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16)) / 255.0 green:((float)((hexValue & 0xFF00) >> 8)) / 255.0 blue:((float)(hexValue & 0xFF)) / 255.0 alpha:1.0f]
 #define ColorloginGray [UIColor colorWithHexString:@"#848484"]
 #define Colorblack [UIColor colorWithHexString:@"#333333"]
 #define ColorYellowHui [UIColor colorsWithRed:254 green:187 blue:8]
+///酒红色
+#define ColorRedJiuHong ColorRGB(97, 4, 17)
 #define CollorRedHui [UIColor colorsWithRed:185 green:0 blue:20]
 #define ColorGreenHui [UIColor colorWithHexString:@"007700"]
 #define ColorWhite  [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1/1.0]

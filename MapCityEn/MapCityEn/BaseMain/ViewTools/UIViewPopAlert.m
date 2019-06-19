@@ -156,8 +156,7 @@
 
 +(void)pushAlertOneActionViewWithMessage:(NSString *)message Target:(UIViewController *)target Title:(NSString *)title oneAlertTitle:(NSString *)oneAlertTitle  ChangeSystem:(BOOL)boools  oneActionfunc:(actionFunc)oneActionfunc{
     
-    
-    
+   
     UIAlertController *alertView = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction *oneaction = [UIAlertAction actionWithTitle:oneAlertTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -182,5 +181,46 @@
     
         
     
+}
+
++ (UIViewController *)xjh_getRootViewController{
+    
+    UIWindow* window = [[[UIApplication sharedApplication] delegate] window];
+    NSAssert(window, @"The window is empty");
+    return window.rootViewController;
+}
++ (UIViewController *)xjh_getCurrentViewController{
+    
+    UIViewController* currentViewController = [self xjh_getRootViewController];
+    BOOL runLoopFind = YES;
+    while (runLoopFind) {
+        if (currentViewController.presentedViewController) {
+            
+            currentViewController = currentViewController.presentedViewController;
+        } else if ([currentViewController isKindOfClass:[UINavigationController class]]) {
+            
+            UINavigationController* navigationController = (UINavigationController* )currentViewController;
+            currentViewController = [navigationController.childViewControllers lastObject];
+            
+        } else if ([currentViewController isKindOfClass:[UITabBarController class]]) {
+            
+            UITabBarController* tabBarController = (UITabBarController* )currentViewController;
+            currentViewController = tabBarController.selectedViewController;
+        } else {
+            
+            NSUInteger childViewControllerCount = currentViewController.childViewControllers.count;
+            if (childViewControllerCount > 0) {
+                
+                currentViewController = currentViewController.childViewControllers.lastObject;
+                
+                return currentViewController;
+            } else {
+                
+                return currentViewController;
+            }
+        }
+        
+    }
+    return currentViewController;
 }
 @end

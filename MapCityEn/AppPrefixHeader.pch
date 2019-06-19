@@ -19,7 +19,7 @@
 
 ////------项目通用
 //App 主色
-#define appColors  ColorBlueLight
+#define appColors  ColorRedJiuHong
 //App 名称
 #define appNames @"Name"
 //App logo
@@ -36,7 +36,6 @@
 ///常用工具类
 
 #import "UIViewPopAlert.h"
-#import "LoginTools.h"
 #import "myButton.h"
 #import "myLabel.h"
 #import "HeardView.h"
@@ -44,8 +43,7 @@
 #import "BaseHiddenBarViewController.h"//控制器基类
 #import "UIViewExt.h"//view的左右上下宽高
 #import "UIColor+Hex.h"//颜色
-#import "MBProgressHUD+Extension.h"//加载显示器
-
+#import "PKProgressHUD.h"
 ///---------pod KU
 #import <SVProgressHUD.h>//加载显示器
 #import <Masonry.h>

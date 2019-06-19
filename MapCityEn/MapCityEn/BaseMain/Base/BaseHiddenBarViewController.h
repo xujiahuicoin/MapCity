@@ -32,8 +32,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL isGesturesBack;
 /// 导航栏titleView的返回按钮 默认隐藏YES
 @property (nonatomic, assign) BOOL isHiddenBackButton;
-
+@property (nonatomic, strong) UIButton *backButton;
 -(void)GoLeft;
+- (void)clickBackButton;
+
 @end
 
 NS_ASSUME_NONNULL_END

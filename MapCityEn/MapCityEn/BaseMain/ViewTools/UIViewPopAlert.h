@@ -57,6 +57,8 @@ NO： 系统默认
  */
 +(void)pushAlertOneActionViewWithMessage:(NSString *)message Target:(UIViewController *)target Title:(NSString *)title oneAlertTitle:(NSString *)oneAlertTitle ChangeSystem:(BOOL)boools  oneActionfunc:(actionFunc )oneActionfunc ;
 
-
-
+///获取当前控制器
++(UIViewController *)xjh_getCurrentViewController;
+///获取root控制器
++(UIViewController *)xjh_getRootViewController;
 @end

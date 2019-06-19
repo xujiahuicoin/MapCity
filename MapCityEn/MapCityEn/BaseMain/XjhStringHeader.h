@@ -14,5 +14,11 @@
 //--tableveiw 通知刷新 前缀
 #define fixString @"tableUpdate"
 
+//SetLeftUi
+
+///主页的左右 菜单的宽度
+#define LeftMenuWidth 400
+//字符串--英文
+#define StrHome @"Home"
 
 #endif /* XjhStringHeader_h */

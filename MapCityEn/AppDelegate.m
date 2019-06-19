@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "UIMainConstructor.h"
+#import <IQKeyboardManager.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +19,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window makeKeyAndVisible];
+    UITabBarController *tabBarController = [[UIMainConstructor sharedUIConstructor] constructUI];
+    self.window.rootViewController = tabBarController;
+    //设置窗口的根控制器
+    //    self.window.rootViewController = [DrawerViewController drawerVcWithMainVc:tabBarController leftMenuVc:leftMenuVc leftWith:300];
+    
+    
+#pragma mark 键盘设置
+    IQKeyboardManager *keyboardManager = [IQKeyboardManager sharedManager]; // 获取类库的单例变量
+    keyboardManager.shouldResignOnTouchOutside = YES; // 控制点击背景是否收起键盘
+    keyboardManager.enableAutoToolbar = NO;
+    
     return YES;
 }
 

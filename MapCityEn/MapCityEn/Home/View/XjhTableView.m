@@ -7,8 +7,7 @@
 //
 
 #import "XjhTableView.h"
-#import "XjhOneTableViewCell.h"
-#import "indexTableViewCell.h"
+
 @interface XjhTableView ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,copy) NSArray * DataMArray ;
@@ -50,19 +49,36 @@
 }
 
 //-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//
+//    
+//    if (_types == ClickTypeHomeMarket) {
+//        indexTableViewCell * cellx = [tableView dequeueReusableCellWithIdentifier:@"cellx"];
+//        if (!cellx) {
+//            cellx = [[indexTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellx"];
+//        }
+//        
+//        cellx.market_model = _DataMArray[indexPath.row];
+//        return cellx;
+//    }
+//    XjhOneTableViewCell * cell1 = [tableView dequeueReusableCellWithIdentifier:@"cell1"];
+//    
+//    if (!cell1) {
+//        cell1 = [[XjhOneTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell1"];
+//        
+//    }
+//    cell1.market_model = _DataMArray[indexPath.row];
+//    
 //    return cell1;
-//
+//    
 //}
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-
+//    if (_types == ClickTypeHomeIndexMore) {
     
         [self.xjhDelegate XjhClickTypeSelecterWithIndex:_types index:indexPath.row marketModel:_DataMArray[indexPath.row]];
         
-
+//    }
     
     
 }

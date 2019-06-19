@@ -14,8 +14,7 @@
         block();
     }else{
         dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD hideHUDForView:[UIApplication sharedApplication].keyWindow animated:YES];
-            [MBProgressHUD showText:@"参数错误" HUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES afterDelay:1.5];
+            [PKProgressHUD pkShowErrorWithStatueTitle:@"解析数据失败" completeBlock:nil];
         });
     }
 }

@@ -15,7 +15,7 @@
 @property (nonatomic, assign) BOOL isHidShadow;
 @property (nonatomic, assign) BOOL isHidBar;
 @property (nonatomic, assign) BOOL isHidTitleView;
-@property (nonatomic, strong) UIButton *backButton;
+
 @end
 
 @implementation BaseHiddenBarViewController
@@ -82,7 +82,7 @@
     
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     backButton.hidden = YES;
-    [backButton addTarget:self action:@selector(clickBackButton:) forControlEvents:UIControlEventTouchUpInside];
+    [backButton addTarget:self action:@selector(clickBackButton) forControlEvents:UIControlEventTouchUpInside];
     [backButton setImage:[UIImage imageNamed:@"bt_navigation_white_nor"] forState:UIControlStateNormal];
     [backButton setTitle:@"   " forState:UIControlStateNormal];
     [navBar addSubview:backButton];
@@ -175,7 +175,7 @@
     self.navBar.hidden = isHiddenBar;
 }
 
-- (void)clickBackButton:(UIButton *)button
+- (void)clickBackButton
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -186,5 +186,6 @@
         return NO;
     }
     return self.isGesturesBack;
-}  
+}
+
 @end
